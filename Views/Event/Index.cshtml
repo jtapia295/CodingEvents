@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<partial name="~/Views/Shared/_LinkedListPartial.cshtml" />
+<h1>Coding Events</h1>
+
+
+@if (ViewBag.Events.Count == 0)
+{
+    <p>No events yet!</p>
+}
+
+<table>
+    <tr>
+        <th>Event</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var occurance in @ViewBag.Events)
+    {
+        <tr>
+            <td>@occurance.Key</td>
+            <td>@occurance.Value</td>
+        </tr>
+    }
+</table>
+
+<h4>
+    <a asp-controller="Events" asp-action="Add">Add Event</a>
+</h4>

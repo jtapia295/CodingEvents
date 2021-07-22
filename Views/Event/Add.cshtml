@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Add a New Event</h1>
+<form method="post" action="/Event/Add">
+    <label>Event:<br/><input type="text" name="Name" /></label>,<br/>
+
+    @*<input type="text" name="Event Description" label="Event Name" />*@
+    <label>Event Description:<br/><textarea name="Description"></textarea></label>,<br/>
+    <input type="submit" value="Add Now!"/>
+</form>

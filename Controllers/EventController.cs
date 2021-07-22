@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Coding_Events.Models;
+using Coding_Events.Data;
+
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,32 +9,47 @@ using System.Threading.Tasks;
 
 namespace Coding_Events.Controllers
 {
-    [Route("/Events")]
+    
     public class EventController : Controller
     {
-        static private Dictionary<string, string> Events = new Dictionary<string, string> { };
+
         public IActionResult Index()
         {
-            ViewBag.Events = Events;
+            ViewBag.Events = EventData.GetAll();
             return View();
         }
 
         [HttpGet]
-        [Route("Add")]
-        public IActionResult AddEvent()
+        public IActionResult Add()
         {
             return View();
         }
 
         [HttpPost]
-        [Route("Add")]
-        public IActionResult AddEvent(string EventName, string EventDescription)
+        [Route("/Event/Add")]
+        public IActionResult AddEvent(Event newEvent)
         {
-            if (!String.IsNullOrEmpty(EventName))
-            {
-                Events.Add(EventName, EventDescription);
-            }
-            return Redirect("/Events");
+            EventData.Add(newEvent);
+            return Redirect("/Event");
         }
+
+        [HttpPost]
+        public IActionResult Delete(int[]eventIds)
+        {
+            foreach(var item in eventIds)
+            {
+                EventData.Remove(item);
+            }
+            return Redirect("/Event");
+        }
+
+
+        public IActionResult Delete()
+        {
+            ViewBag.events = EventData.GetAll();
+            return View();
+        }
+
+        
     }
 }

@@ -13,20 +13,25 @@
     <p>No events yet!</p>
 }
 
-<table>
+<table class="table">
     <tr>
+        <th>ID</th>
         <th>Event</th>
         <th>Description</th>
     </tr>
     @foreach (var occurance in @ViewBag.Events)
     {
         <tr>
-            <td>@occurance.Key</td>
-            <td>@occurance.Value</td>
+            <td>@occurance.Id</td>
+            <td>@occurance.Name</td>
+            <td>@occurance.Description</td>
         </tr>
     }
 </table>
 
 <h4>
-    <a asp-controller="Events" asp-action="Add">Add Event</a>
+    <a asp-controller="Event" asp-action="Add">Add Event</a>
 </h4>
+<p>
+    <a asp-controller="Event" asp-action="Delete">Delete Event</a>
+</p>

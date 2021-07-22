@@ -4,7 +4,7 @@
 @{
 }
 
-<partial name="~/Views/Shared/_LinkedListPartial.cshtml" />
+
 <h1>Coding Events</h1>
 
 
@@ -25,13 +25,21 @@
             <td>@occurance.Id</td>
             <td>@occurance.Name</td>
             <td>@occurance.Description</td>
+            <td><a asp-controller="Event" asp-action="Edit" asp-route-id="@occurance.Id">Edit</a></td>
         </tr>
     }
 </table>
 
-<h4>
-    <a asp-controller="Event" asp-action="Add">Add Event</a>
-</h4>
-<p>
-    <a asp-controller="Event" asp-action="Delete">Delete Event</a>
-</p>
+
+@*<input type="button"  value="Add Event" action=">*@
+<form action="/Event/Add" class="form-group">
+    <h4>
+        <button class="btn-primary">Add Event</button>
+    </h4>
+</form>
+<form action="/Event/Delete" class="form-group">
+    <h6>
+        <button class="btn-outline-danger">Delete Event</button>
+    </h6>
+</form>
+

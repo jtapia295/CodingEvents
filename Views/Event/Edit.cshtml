@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Edit Your New Event</h1>
+<form method="post" action="/Event/Edit" class="form-group">
+    <label>Event:<br /><input type="text" name="Name" value="@ViewBag.eventData.Name" class="form-control"></label><br />
+    <label>Event Description:<br /><input type="text" name="Description" value="@ViewBag.eventData.Description" class="form-control"></label><br />
+    <input type="hidden" value="@ViewBag.eventData.Id" name="eventId" />
+    <input type="submit" value="Edit" class="btn-success" />
+    <button onclick="/Event/" class="btn-secondary">Go Back</button>
+</form>

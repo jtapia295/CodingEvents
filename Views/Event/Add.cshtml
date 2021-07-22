@@ -5,10 +5,8 @@
 }
 
 <h1>Add a New Event</h1>
-<form method="post" action="/Event/Add">
-    <label>Event:<br/><input type="text" name="Name" /></label>,<br/>
-
-    @*<input type="text" name="Event Description" label="Event Name" />*@
-    <label>Event Description:<br/><textarea name="Description"></textarea></label>,<br/>
-    <input type="submit" value="Add Now!"/>
+<form method="post" action="/Event/Add" class="form-group">
+    <label>Event:<br /><input type="text" name="Name" class="form-control" /></label><br />
+    <label>Event Description:<input type="text" name="Description" label="Event Name" class="form-control" /></label> <br />
+    <input type="submit" value="Add Now!" class="btn-primary" />
 </form>

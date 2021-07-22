@@ -6,7 +6,7 @@ namespace Coding_Events.Data
 {
     public class EventData
     {
-        private static Dictionary<int,Event> Events = new Dictionary<int, Event>{ };
+        private static Dictionary<int, Event> Events = new Dictionary<int, Event> { };
 
         public static void Add(Event newEvent)
         {
@@ -24,9 +24,15 @@ namespace Coding_Events.Data
         {
             Events.Remove(Id);
         }
+
+        public static void Update(int Id, string name, string description)
+        {
+            Events[Id].Name = name;
+            Events[Id].Description = description;
+        }
         public EventData()
         {
-            
+
         }
     }
 }

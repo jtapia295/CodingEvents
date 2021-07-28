@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Coding_Events.ViewModels;
 
 namespace Coding_Events.Controllers
 {
@@ -14,22 +15,34 @@ namespace Coding_Events.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Events = EventData.GetAll();
-            return View();
+            List<Event> events = new List<Event>(EventData.GetAll());
+            return View(events);
         }
 
         [HttpGet]
         public IActionResult Add()
         {
-            return View();
+            AddEventViewModel addEventViewModel = new AddEventViewModel();
+            return View(addEventViewModel);
         }
 
         [HttpPost]
-        [Route("/Event/Add")]
-        public IActionResult AddEvent(Event newEvent)
+        public IActionResult Add(AddEventViewModel addEventViewModel)
         {
-            EventData.Add(newEvent);
-            return Redirect("/Event");
+            if (ModelState.IsValid)
+            {
+                Event newEvent = new Event
+                {
+                    Name = addEventViewModel.Name,
+                    Description = addEventViewModel.Description,
+                    ContactEmail = addEventViewModel.ContactEmail
+                };
+                EventData.Add(newEvent);
+                return Redirect("/Event");
+            }
+            return View(addEventViewModel);
+
+
         }
 
         [HttpPost]

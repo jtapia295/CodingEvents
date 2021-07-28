@@ -35,7 +35,10 @@ namespace Coding_Events.Controllers
                 {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
-                    ContactEmail = addEventViewModel.ContactEmail
+                    ContactEmail = addEventViewModel.ContactEmail,
+                    EventLocation = addEventViewModel.EventLocation,
+                    Attendees = addEventViewModel.Attendees,
+                    RegistrationRequired = addEventViewModel.RegistrationRequired
                 };
                 EventData.Add(newEvent);
                 return Redirect("/Event");
@@ -66,9 +69,7 @@ namespace Coding_Events.Controllers
         [Route("Event/Edit/{eventId}")]
         public IActionResult Edit(int eventId)
         {
-            //ViewBag.Title = "Edit Event NAME (id=ID)".Where("NAME" && "ID ");
             ViewBag.eventData = EventData.GetById(eventId);
-            //Code to edit event
             return View();
         }
 

@@ -18,8 +18,20 @@
         <span asp-validation-for="Description" class="text-danger"></span>
     </div><br />
     <div>
+        <label>Event Location:<input asp-for="EventLocation" class="form-control" /></label>
+        <span asp-validation-for="EventLocation" class="text-danger"></span>
+    </div><br />
+    <div>
+        <label>Number of Attendees:<input asp-for="Attendees" class="form-control" /></label>
+        <span asp-validation-for="Attendees" class="text-danger"></span>
+    </div><br />
+    <div>
         <label>Email:<input asp-for="ContactEmail" class="form-control" /></label>
         <span asp-validation-for="ContactEmail" class="text-danger"></span>
+    </div><br />
+    <div>
+        <label>Registration Required?<input type="checkbox" asp-for="RegistrationRequired" class="form-control" /></label>
+        <span asp-validation-for="RegistrationRequired" class="text-danger"></span>
     </div><br />
 
     <input type="submit" value="Add Now!" class="btn btn-primary" />

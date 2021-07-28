@@ -8,8 +8,15 @@ namespace Coding_Events.Models
 
         public string ContactEmail { get; set; }
 
+        public string EventLocation { get; set; }
+
+        public int Attendees { get; set; }
+
+        public bool RegistrationRequired { get; set; }
+
         public int Id { get; }
         private static int nextId = 1;
+
 
         public Event()
         {

@@ -21,6 +21,7 @@
         <th>Event Location</th>
         <th>Number of Attendees</th>
         <th>Contact Email</th>
+        <th>Event Type</th>
     </tr>
     @foreach (var occurance in Model)
     {
@@ -31,6 +32,7 @@
             <td>@occurance.EventLocation</td>
             <td>@occurance.Attendees</td>
             <td>@occurance.ContactEmail</td>
+            <td>@occurance.Type</td>>
             <td><a asp-controller="Event" asp-action="Edit" asp-route-id="@occurance.Id">Edit</a></td>
         </tr>
     }

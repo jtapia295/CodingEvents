@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\CH14-CodingEvents\\Coding_Events.csproj": {}
+    "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\Coding-Events\\Coding_Events.csproj": {}
   },
   "projects": {
-    "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\CH14-CodingEvents\\Coding_Events.csproj": {
+    "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\Coding-Events\\Coding_Events.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\CH14-CodingEvents\\Coding_Events.csproj",
+        "projectUniqueName": "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\Coding-Events\\Coding_Events.csproj",
         "projectName": "Coding_Events",
-        "projectPath": "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\CH14-CodingEvents\\Coding_Events.csproj",
+        "projectPath": "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\Coding-Events\\Coding_Events.csproj",
         "packagesPath": "C:\\Users\\jtapi\\.nuget\\packages\\",
-        "outputPath": "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\CH14-CodingEvents\\obj\\",
+        "outputPath": "D:\\windows-repos\\LaunchCode\\Unit 2\\Exercises\\Coding-Events\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jtapi\\AppData\\Roaming\\NuGet\\NuGet.Config",

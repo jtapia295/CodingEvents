@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Coding_Events.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Coding_Events.ViewModels
 {
@@ -24,15 +26,27 @@ namespace Coding_Events.ViewModels
         public int Attendees { get; set; }
 
         [Compare("IsTrue", ErrorMessage = "Registration is required")]
-
         public bool RegistrationRequired { get; set; }
-
 
         public bool IsTrue { get { return true; } }
 
         [EmailAddress(ErrorMessage = "Please enter a valid email")]
         [Required(ErrorMessage = "Please enter an Email")]
         public string ContactEmail { get; set; }
+
+        public EventType Type{ get; set; }
+
+        public List<SelectListItem> EventTypes { get; set; } = new List<SelectListItem> 
+        { 
+            new SelectListItem(EventType.Conference.ToString(), (( int) EventType.Conference).ToString()),
+            
+            new SelectListItem(EventType.Meetup.ToString(), ((int) EventType.Meetup).ToString()),
+
+            new SelectListItem(EventType.Social.ToString(), ((int) EventType.Social).ToString()),
+
+            new SelectListItem(EventType.Workshop.ToString(), ((int) EventType.Workshop).ToString())
+        };
+
 
 
 

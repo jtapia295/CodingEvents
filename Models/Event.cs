@@ -17,6 +17,8 @@ namespace Coding_Events.Models
         public int Id { get; }
         private static int nextId = 1;
 
+        public EventType Type { get; set; }
+
 
         public Event()
         {

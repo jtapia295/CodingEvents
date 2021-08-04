@@ -8,6 +8,7 @@ namespace Coding_Events.Data
     {
         private static Dictionary<int, Event> Events = new Dictionary<int, Event> { };
 
+
         public static void Add(Event newEvent)
         {
             Events.Add(newEvent.Id, newEvent);

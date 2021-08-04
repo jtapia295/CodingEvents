@@ -1,25 +1,30 @@
 ﻿<Properties StartupConfiguration="{2BBA41D1-CF12-4839-B0D4-2EF4CF2FF145}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/EventCategoryController.cs">
+    <Files>
+      <File FileName="Models/EventCategory.cs" Line="9" Column="1" />
+      <File FileName="Controllers/EventCategoryController.cs" Line="41" Column="60" />
+      <File FileName="ViewModels/AddEventControllerViewModel.cs" Line="14" Column="10" />
+      <File FileName="Views/EventCategory/Create.cshtml" Line="7" Column="35" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Coding_Events" expanded="True">
             <Node name="Coding_Events" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="EventController.cs" selected="True" />
+                <Node name="EventCategoryController.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Event" expanded="True" />
+                <Node name="EventCategory" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

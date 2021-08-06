@@ -34,20 +34,21 @@ namespace Coding_Events.ViewModels
         [Required(ErrorMessage = "Please enter an Email")]
         public string ContactEmail { get; set; }
 
-        public EventType Type{ get; set; }
+        [Required(ErrorMessage = "Cateory is required")]
+        public int CategoryId { get; set; }
+      
 
-        public List<SelectListItem> EventTypes { get; set; } = new List<SelectListItem> 
-        { 
-            new SelectListItem(EventType.Conference.ToString(), (( int) EventType.Conference).ToString()),
-            
-            new SelectListItem(EventType.Meetup.ToString(), ((int) EventType.Meetup).ToString()),
-
-            new SelectListItem(EventType.Social.ToString(), ((int) EventType.Social).ToString()),
-
-            new SelectListItem(EventType.Workshop.ToString(), ((int) EventType.Workshop).ToString())
-        };
-
-
+        public List<SelectListItem> Categories { get; set; }
+        
+        
+        public AddEventViewModel (List<EventCategory> categories)
+        {
+            Categories = new List<SelectListItem>();
+            foreach (var category in categories)
+            {
+                Categories.Add(new SelectListItem { Value = category.Id.ToString(), Text = category.Name });
+            }
+        }
 
 
 

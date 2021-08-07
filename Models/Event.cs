@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Coding_Events.Models
 {
     public class Event
@@ -18,6 +20,7 @@ namespace Coding_Events.Models
 
         public EventCategory Category { get; set; }
         public int  CategoryId { get; set; }
+
 
 
         public Event()

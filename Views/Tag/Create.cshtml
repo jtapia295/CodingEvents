@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Coding_Events.ViewModels
+@model NewTagViewModel
+
+
+<h1>Add a new Tag</h1>
+<hr />
+<form method="post" class="form-group" asp-controller="Tag" asp-action="Create1">
+    <div>
+        <label>Tag Name:<br /><input asp-for="Name" class="form-control" /></label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <br />
+    <input type="submit" value="Add Now!" class="btn btn-primary" />
+</form>

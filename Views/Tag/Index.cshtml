@@ -1,0 +1,44 @@
+﻿@*@using Coding_Events.Models*@
+@model List<Tag>
+
+@{
+}
+
+
+<h1>Available Tags</h1>
+
+
+@if (Model.Count == 0)
+{
+    <p>No Tags yet!</p>
+}
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+
+    </tr>
+    @foreach (var occurance in Model)
+    {
+        <tr>
+            <td>@occurance.Id</td>
+            <td>@occurance.Name</td>
+            <td><a asp-controller="Tag" asp-action="Details" asp-route-id="@occurance.Id">View Tag Details</a></td>
+        </tr>
+    }
+</table>
+
+
+@*<input type="button"  value="Add Event" action=">*@
+<form action="/Tag/Create" class="form-group">
+    <h4>
+        <button class="btn btn-primary">Create New Tag</button>
+    </h4>
+</form>
+<form action="/Tag/Delete" class="form-group">
+    <h6>
+        <button class="btn btn-outline-danger">Delete Tags</button>
+    </h6>
+</form>
+

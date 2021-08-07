@@ -3,3 +3,21 @@
 *@
 @{
 }
+@using Coding_Events.ViewModels
+@model EventDetailViewModel
+
+
+<h1>Details for the Event of @Model.Name</h1>
+<hr />
+<h5>@Html.DisplayNameFor(model => model.Name) :</h5> <p>@Html.DisplayFor(model => model.Name)</p>
+<br />
+<h5>@Html.DisplayNameFor(model => model.Description) :</h5><p>@Html.DisplayFor(model => model.Description)</p>
+<br />
+<h5>@Html.DisplayNameFor(model => model.ContactEmail) :</h5><p>@Html.DisplayFor(model => model.ContactEmail)</p>
+<br />
+<h5>@Html.DisplayNameFor(model => model.CategoryName) :</h5><p>@Html.DisplayFor(model => model.CategoryName)</p>
+<br />
+<h5>@Html.DisplayNameFor(model => model.Tags) :</h5><p>@Html.DisplayFor(model => model.Tags)</p>
+<br />
+<a asp-controller="Tag" asp-action="AddEvent" asp-route-id="@Model.EventId">Add Tag</a>
+

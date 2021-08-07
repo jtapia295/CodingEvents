@@ -14,7 +14,11 @@ namespace Coding_Events.Controllers
     public class EventController : Controller
     {
         private EventDbContext _context;
-        public EventController(EventDbContext dbContext)        {            _context = dbContext;        }
+
+        public EventController(EventDbContext dbContext)
+        {
+            _context = dbContext;
+        }
 
         public IActionResult Index()
         {
@@ -61,8 +65,8 @@ namespace Coding_Events.Controllers
             foreach (var item in eventIds)
             {
                 Event theEvent = _context.Events.Find(item);
-			    _context.Events.Remove(theEvent);
-		    }
+                _context.Events.Remove(theEvent);
+            }
             _context.SaveChanges();
             return Redirect("/Event");
         }
@@ -89,11 +93,13 @@ namespace Coding_Events.Controllers
         //    return Redirect("/Event");
         //}
 
-        [HttpGet("Event/Details/{eventId}")]
-        public IActionResult Details (int eventId)
+        //[HttpGet("Event/Details/{eventId}")]
+        public IActionResult Details(int id)
         {
-            Event theEvent = _context.Events.Include(c => c.Category).Single(e => e.Id == eventId);
-            return View(theEvent);
+            Event theEvent = _context.Events.Include(c => c.Category).Single(e => e.Id == id);
+            List<EventTag> eventTags = _context.EventTags.Where(et => et.EventId == id).Include(et => et.Tag).ToList();
+            EventDetailViewModel details = new EventDetailViewModel(theEvent, eventTags);
+            return View(details);
         }
 
     }

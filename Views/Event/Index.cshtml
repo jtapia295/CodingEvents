@@ -22,19 +22,22 @@
         <th>Number of Attendees</th>
         <th>Contact Email</th>
         <th>Event Category</th>
+        <th>Tags</th>
+
     </tr>
     @foreach (var occurance in Model)
     {
-        <tr>
-            <td>@occurance.Id</td>
-            <td>@occurance.Name</td>
-            <td>@occurance.Description</td>
-            <td>@occurance.EventLocation</td>
-            <td>@occurance.Attendees</td>
-            <td>@occurance.ContactEmail</td>
-            <td>@occurance.Category.Name</td>>
-            <td><a asp-controller="Event" asp-action="Edit" asp-route-id="@occurance.Id">Edit</a></td>
-        </tr>
+    <tr>
+        <td>@occurance.Id</td>
+        <td>@occurance.Name</td>
+        <td>@occurance.Description</td>
+        <td>@occurance.EventLocation</td>
+        <td>@occurance.Attendees</td>
+        <td>@occurance.ContactEmail</td>
+        <td>@occurance.Category.Name</td>
+        <td><a asp-controller="Event" asp-action="Edit" asp-route-id="@occurance.Id">Edit</a></td>
+        <td><a asp-controller="Event" asp-action="Details" asp-route-id="@occurance.Id">View Details</a></td>
+    </tr>
     }
 </table>
 

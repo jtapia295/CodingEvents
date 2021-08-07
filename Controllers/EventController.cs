@@ -89,6 +89,12 @@ namespace Coding_Events.Controllers
         //    return Redirect("/Event");
         //}
 
+        [HttpGet("Event/Details/{eventId}")]
+        public IActionResult Details (int eventId)
+        {
+            Event theEvent = _context.Events.Include(c => c.Category).Single(e => e.Id == eventId);
+            return View(theEvent);
+        }
 
     }
 }

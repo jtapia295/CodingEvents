@@ -802,7 +802,7 @@
       "outputPath": "/Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/josetapia/.nuget/NuGet/NuGet.Config"
+        "/Users/josetapia/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

@@ -7,10 +7,10 @@
 @model AddEventControllerViewModel
 
 
-<h1>Add a New Event</h1>
+<h1>Add a New Category</h1>
 <form method="post" class="form-group" asp-action="ProcessCreateEventCategoryForm">
     <div>
-        <label>Event:<br /><input asp-for="Name" class="form-control" /></label>
+        <label>Category Name:<br /><input asp-for="Name" class="form-control" /></label>
         <span asp-validation-for="Name" class="text-danger"></span>
     </div><br />
     <input type="submit" value="Add Now!" class="btn btn-primary" />

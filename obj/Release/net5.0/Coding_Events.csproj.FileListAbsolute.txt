@@ -97,3 +97,4 @@
 /Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/bin/Release/net5.0/System.Diagnostics.DiagnosticSource.dll
 /Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Release/net5.0/Razor/Views/EventCategory/Index.cshtml.g.cs
 /Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Release/net5.0/Razor/Views/EventCategory/Create.cshtml.g.cs
+/Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Release/net5.0/Razor/Views/EventCategory/Delete.cshtml.g.cs

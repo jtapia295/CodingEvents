@@ -54,5 +54,29 @@ namespace Coding_Events.Controllers
 
             return Redirect("/EventCategory");
         }
+
+        [HttpPost]
+        public IActionResult Delete(int[] eventIds)
+        {
+            foreach (var item in eventIds)
+            {
+                EventCategory category = _context.Categories.Find(item);
+                var @event = _context.Events.Where(x => x.CategoryId == item);
+                //@event.Category = null;
+                //@event.CategoryId = 0;
+                _context.Categories.Remove(category);
+               
+            }
+            _context.SaveChanges();
+            return Redirect("/EventCategory");
+        }
+
+
+        public IActionResult Delete()
+        {
+            ViewBag.events = _context.Categories.ToList();
+            return View();
+        }
+
     }
 }

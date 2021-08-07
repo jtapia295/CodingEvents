@@ -228,3 +228,4 @@ D:/windows-repos/LaunchCode/Unit 2/Exercises/Coding-Events/obj/Debug/net5.0/Codi
 /Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Debug/net5.0/Coding_Events.csproj.CopyComplete
 /Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Debug/net5.0/Coding_Events.genruntimeconfig.cache
 /Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Debug/net5.0/Razor/Views/EventCategory/Index.cshtml.g.cs
+/Users/josetapia/mac-repos/LaunchCode/Unit 2/Exercises/EventApp/CodingEvents/obj/Debug/net5.0/Razor/Views/EventCategory/Create.cshtml.g.cs

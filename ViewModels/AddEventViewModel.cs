@@ -34,9 +34,10 @@ namespace Coding_Events.ViewModels
         [Required(ErrorMessage = "Please enter an Email")]
         public string ContactEmail { get; set; }
 
-        [Required(ErrorMessage = "Cateory is required")]
+
+        [Required(ErrorMessage = "Category is required")]
         public int CategoryId { get; set; }
-      
+        
 
         public List<SelectListItem> Categories { get; set; }
         
@@ -50,6 +51,7 @@ namespace Coding_Events.ViewModels
             }
         }
 
+        public AddEventViewModel() { }
 
 
 

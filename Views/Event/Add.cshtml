@@ -30,13 +30,13 @@
         <span asp-validation-for="ContactEmail" class="text-danger"></span>
     </div><br />
     <div>
-        <label asp-for="Type">Event Type</label>
-        <select asp-for="Type" asp-items="Model.EventTypes">
+        <label asp-for="CategoryId">Event Type</label>
+        <select asp-for="CategoryId" asp-items="Model.Categories">
             @*Asp items attribute automatically makes options*@
         </select>
     </div>
     <div>
-        <label>Registration Required?<input type="checkbox" asp-for="RegistrationRequired" class="form-control" /></label>
+        <label>Registration Required?<input type="checkbox" asp-for="RegistrationRequired" class="form-check" /></label>
         <span asp-validation-for="RegistrationRequired" class="text-danger"></span>
     </div><br />
 

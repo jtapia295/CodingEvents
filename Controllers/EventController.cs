@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Coding_Events.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace Coding_Events.Controllers
 {
@@ -17,14 +18,14 @@ namespace Coding_Events.Controllers
 
         public IActionResult Index()
         {
-            List<Event> events = _context.Events.ToList();
+            List<Event> events = _context.Events.Include(e => e.Category).ToList();
             return View(events);
         }
 
         [HttpGet]
         public IActionResult Add()
         {
-            AddEventViewModel addEventViewModel = new AddEventViewModel();
+            AddEventViewModel addEventViewModel = new AddEventViewModel(_context.Categories.ToList()); ;
             return View(addEventViewModel);
         }
 
@@ -33,6 +34,7 @@ namespace Coding_Events.Controllers
         {
             if (ModelState.IsValid)
             {
+                EventCategory category = _context.Categories.Find(addEventViewModel.CategoryId);
                 Event newEvent = new Event
                 {
                     Name = addEventViewModel.Name,
@@ -41,7 +43,7 @@ namespace Coding_Events.Controllers
                     EventLocation = addEventViewModel.EventLocation,
                     Attendees = addEventViewModel.Attendees,
                     RegistrationRequired = addEventViewModel.RegistrationRequired,
-                    Type = addEventViewModel.Type
+                    Category = category
                 };
                 _context.Events.Add(newEvent);
                 _context.SaveChanges();
